@@ -15,6 +15,11 @@ Created and maintained by [3C Plus](https://3cplusnow.com/).
   - Process management
   - Custom queue configuration
   - Auto-balancing strategies
+- **MailDev**: SMTP Server + Web Interface for email testing
+  - Catch all outgoing emails
+  - Web interface to preview emails
+  - API for email testing
+  - No emails are actually sent to real recipients
 
 ## Requirements
 
@@ -63,6 +68,9 @@ The following services will be available:
   - Database: laravel
 - **Redis**: localhost:6379
 - **Horizon Dashboard**: http://localhost:8001/horizon
+- **MailDev (Email Testing)**: http://localhost:1080
+  - SMTP Server: localhost:1025
+  - Web Interface: http://localhost:1080
 
 ## API Endpoints
 
@@ -183,6 +191,15 @@ REDIS_PASSWORD=null
 REDIS_PORT=6379
 
 QUEUE_CONNECTION=redis
+
+MAIL_MAILER=smtp
+MAIL_HOST=maildev
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 ## Contributing
